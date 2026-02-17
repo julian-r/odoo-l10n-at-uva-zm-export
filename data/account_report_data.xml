@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Set the custom handler on the Austrian Tax Report (UVA) -->
+        <record id="l10n_at.tax_report" model="account.report">
+            <field name="custom_handler_model_id" ref="l10n_at_uva_export.model_l10n_at_uva_report_handler"/>
+        </record>
+
+        <!-- Set the custom handler on the Austrian EC Sales Report (ZM) -->
+        <record id="l10n_at_reports.austrian_ec_sales_report" model="account.report">
+            <field name="custom_handler_model_id" ref="l10n_at_uva_export.model_l10n_at_zm_report_handler"/>
+        </record>
+    </data>
+</odoo>
